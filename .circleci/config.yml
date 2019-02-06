@@ -6,7 +6,7 @@ defaults: &defaults
     - image: circleci/ruby:2.5.1-node-browsers-legacy
   working_directory: ~/circleci-eks-agent
   environment:
-    LIBRARY: # insert container repository here
+    LIBRARY: joatmon08
     CONTAINER_NAME: circleci-eks-agent
 
 jobs:
