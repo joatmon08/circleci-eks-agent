@@ -1,0 +1,8 @@
+---
+name: circleci-eks-agent
+title: validate image used for eks interfacing
+summary: Verify installed eks packaging
+version: 1.0.0
+maintainer: Rosemary Wang
+copyright: Rosemary Wang
+license: Apache-2.0
