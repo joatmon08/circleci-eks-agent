@@ -51,7 +51,10 @@ jobs:
             docker pull $LIBRARY/$CONTAINER_NAME:$IMAGE_VERSION
             CID=$(docker run -d -v /var/run/docker.sock:/var/run/docker.sock:ro $LIBRARY/$CONTAINER_NAME:$IMAGE_VERSION sleep 360)
             inspec exec profiles/circleci_eks_agent -t docker://$CID
-            docker rm -f $CID
+      - run:
+          name: cleanup
+          when: always
+          command: docker rm -f $CID
 
 workflows:
   version: 2
