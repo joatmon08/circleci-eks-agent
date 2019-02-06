@@ -39,7 +39,7 @@ control 'check git' do
   title 'confirm git installed'
   desc 'confirm git installed'
   describe command('git version') do
-    its('stdout') { should include '2.18.1' }
+    its('stdout') { should include '2.20.1' }
   end
 end
 
@@ -48,7 +48,7 @@ control 'check openssl' do
   title 'confirm openssl installed'
   desc 'confirm openssl installed'
   describe command('openssl version') do
-    its('stdout') { should include '1.0.2' }
+    its('stdout') { should include '1.1.1a' }
   end
 end
 
@@ -57,7 +57,7 @@ control 'check python' do
   title 'confirm python installed'
   desc 'confirm python installed'
   describe command('python --version') do
-    its('stdout') { should include '3.6.6' }
+    its('stdout') { should include '3.6.8' }
   end
   describe command('pip --version') do
     its('stdout') { should include '19.0.1' }
